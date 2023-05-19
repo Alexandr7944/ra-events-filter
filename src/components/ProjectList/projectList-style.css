@@ -1,0 +1,20 @@
+.project-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  padding: 20px 0;
+}
+
+.project-item {
+  width: 100%;
+  max-width: 250px;
+  align-self: flex-start;
+}
+
+.project-item>img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
