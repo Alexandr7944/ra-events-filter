@@ -1,19 +1,13 @@
 import { ProjectType } from '../../module/ProjectType';
+import ProjectColumn from '../ProjectColumn';
 import './projectList-style.css';
 
 const ProjectList: React.FC<ProjectListProps> = ({ project }) => {  
   return (
-    <div className='project-list'>
-      {
-        project.map((item: ProjectType, index) => (
-          <div
-            className="project-item"
-            key={Date.now() + index}
-          >
-            <img src={item.img} alt="" />
-          </div>
-        ))
-      }
+    <div className='project__list'>
+      <ProjectColumn project={project} columns={3} numberColumn={1}/>
+      <ProjectColumn project={project} columns={3} numberColumn={2}/>
+      <ProjectColumn project={project} columns={3} numberColumn={3}/>
     </div>
   )
 }

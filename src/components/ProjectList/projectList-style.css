@@ -1,20 +1,27 @@
-.project-list {
+.project__list {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  justify-content: center;
   gap: 5px;
 
-  padding: 20px 0;
+  padding: 20px;
+  box-shadow: 0 8px 8px  10px rgba(0, 0, 0, 0.5);
 }
 
-.project-item {
-  width: 100%;
-  max-width: 250px;
-  align-self: flex-start;
+.project__column {
+  width: calc((100% - 10px) / 3);
 }
 
-.project-item>img {
+.project__item {
+  overflow: hidden;
+}
+
+.project__item>img {
   width: 100%;
   height: auto;
   object-fit: contain;
+  transition: .4s;
+}
+
+.project__item>img:hover {
+  transform: scale(1.2);
 }
